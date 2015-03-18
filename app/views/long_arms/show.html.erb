@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%= render 'html_header' %>
+
+<body>
+
+<%= render 'nav' %>
+
+<div class="container">
+  <div class="row">
+    <div id="box" class="box">
+
+      <div class="col-lg-12">
+        <hr>
+        <h1 class="intro-text text-center">Create <strong>Estimate</strong></h1>
+        <hr>
+      </div>
+
+      <div class="col-lg-12 text-center">
+        <div class="col-lg-6 text-left">
+          <h1>Long Arm Quilt</h1><br>
+        </div>
+      </div>
+
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <strong>Name:</strong>
+        <%= @long_arm.name %>
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <%= @long_arm.email %>
+      </p>
+
+      <p>
+        <strong>Phone:</strong>
+        <%= @long_arm.phone %>
+      </p>
+
+      <p>
+        <strong>Size:</strong>
+        <%= @long_arm.size %>
+      </p>
+
+      <p>
+        <strong>Batting:</strong>
+        <%= @long_arm.batting %>
+      </p>
+
+      <p>
+        <strong>Binding:</strong>
+        <%= @long_arm.binding %>
+      </p>
+
+      <p>
+        <strong>Quilting:</strong>
+        <%= @long_arm.quilting %>
+      </p>
+
+      <p>
+        <strong>Pantograph patterns:</strong>
+        <%= @long_arm.pantograph_patterns %>
+      </p>
+
+      <p>
+        <strong>Total:</strong>
+        <%= @long_arm.total %>
+      </p>
+
+      <%= link_to 'Edit', edit_long_arm_path(@long_arm), :class => 'btn btn-default' %> 
+      <%= link_to 'Back', long_arms_path, :class => 'btn btn-default' %>
+
+    </div>
+  </div>
+</div>
+
+<%= render 'footer' %>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%= render 'html_header' %>
+
+<body>
+
+<%= render 'nav' %>
+
+<div class="container">
+  <div class="row">
+    <div id="box" class="box">
+
+      <div class="col-lg-12">
+        <hr>
+        <h1 class="intro-text text-center">Create <strong>Estimate</strong></h1>
+        <hr>
+      </div>
+
+      <div class="col-lg-12 text-center">
+        <div class="col-lg-6 text-left">
+          <h1>T-Shirt Quilt</h1><br>
+        </div>
+      </div>
+
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <strong>Name:</strong>
+        <%= @tshirt.name %>
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <%= @tshirt.email %>
+      </p>
+
+      <p>
+        <strong>Phone:</strong>
+        <%= @tshirt.phone %>
+      </p>
+
+      <p>
+        <strong>Shirts:</strong>
+        <%= @tshirt.shirts %>
+      </p>
+
+      <p>
+        <strong>Total:</strong>
+        <%= @tshirt.total %>
+      </p>
+
+      <%= link_to 'Edit', edit_tshirt_path(@tshirt), :class => 'btn btn-default' %> 
+      <%= link_to 'Home', root_path, :class => 'btn btn-default' %>
+
+    </div>
+  </div>
+</div>
+
+<%= render 'footer' %>
+
+</body>
+
+</html>

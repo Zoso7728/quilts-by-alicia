@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%= render 'html_header' %>
+
+<body onLoad="password();">
+
+<div class="brand">Quilts By Alicia</div>
+<div class="address-bar">Wills Point, TX 75169 | 903.340.0548</div>
+
+<!-- The rest of the page goes below here! -->
+<div class="container">
+  <div class="row">
+      <div id="box" class="box">
+
+        <div class="col-lg-12 text-center">
+          <div class="col-lg-6 text-left">
+            <h1>Custom Quilt</h1><br>
+          </div>
+        </div>
+
+
+
+        <div class="col-lg-12 text-center">        
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Size</th>
+              <th>Quilting</th>
+              <th>Pantograph patterns</th>
+              <th>Total</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @customs.each do |custom| %>
+              <tr>
+                <td><%= custom.name %></td>
+                <td><%= custom.email %></td>
+                <td><%= custom.phone %></td>
+                <td><%= custom.size %></td>
+                <td><%= custom.quilting %></td>
+                <td><%= custom.pantograph_patterns %></td>
+                <td><%= custom.total %></td>
+                <td><%= link_to 'Show', custom, :class => 'btn btn-default' %></td>
+                <td><%= link_to 'Edit', edit_custom_path(custom), :class => 'btn btn-default' %></td>
+                <td><%= link_to 'Destroy', custom, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-default' %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <br>
+
+        <%= link_to 'New Photo memory', new_photo_memory_path, :class => 'btn btn-default' %>
+
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<h2>Photo Memory</h2>
+  <table class="photo_memory-table" align="center">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Size</th>
+        <th>Total</th>
+        <th>Notes</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @photo_memories.each do |photo_memory| %>
+        <tr>
+          <td><%= photo_memory.name %></td>
+          <td><%= photo_memory.email %></td>
+          <td><%= photo_memory.phone %></td>
+          <td><%= photo_memory.size %></td>
+          <td><%= photo_memory.total %></td>
+          <td><%= photo_memory.notes %></td>
+          <td><%= link_to 'Show', photo_memory, :class => 'btn btn-default' %></td>
+          <td><%= link_to 'Edit', edit_photo_memory_path(photo_memory), :class => 'btn btn-default' %></td>
+          <td><%= link_to 'Destroy', photo_memory, :class => 'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Photo memory', new_photo_memory_path, :class => 'btn btn-default' %>

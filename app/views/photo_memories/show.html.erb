@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%= render 'html_header' %>
+
+<body>
+
+<%= render 'nav' %>
+
+<div class="container">
+  <div class="row">
+    <div id="box" class="box">
+
+      <div class="col-lg-12">
+        <hr>
+        <h1 class="intro-text text-center">Create <strong>Estimate</strong></h1>
+        <hr>
+      </div>
+
+      <div class="col-lg-12 text-center">
+        <div class="col-lg-6 text-left">
+          <h1>Photo Memory Quilt</h1><br>
+        </div>
+      </div>
+
+      
+        <p id="notice"><%= notice %></p>
+
+        <p>
+          <strong>Name:</strong>
+          <%= @photo_memory.name %>
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <%= @photo_memory.email %>
+        </p>
+
+        <p>
+          <strong>Phone:</strong>
+          <%= @photo_memory.phone %>
+        </p>
+
+        <p>
+          <strong>Size:</strong>
+          <%= @photo_memory.size %>
+        </p>
+
+        <p>
+          <strong>Total:</strong>
+          <%= @photo_memory.total %>
+        </p>
+
+        <p>
+          <strong>Notes:</strong>
+          <%= @photo_memory.notes %>
+        </p>
+
+        <p>
+          <strong>Complete:</strong>
+          <%= @photo_memory.complete %>
+        </p>
+ 
+        <%= link_to 'Home', root_path, :class => 'btn btn-default' %>
+
+
+    </div>
+  </div>
+</div>
+
+<%= render 'footer' %>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<%= form_for(@custom) do |f| %>
+  <% if @custom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@custom.errors.count, "error") %> prohibited this custom from being saved:</h2>
+
+      <ul>
+      <% @custom.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="col-lg-12 text-center">
+    <div class="col-lg-6 text-left">
+    <h2>Contact Information</h2>
+    </div>
+  </div>
+
+  <div class="col-lg-12 text-center">
+    <div class="col-lg-3 text-left">
+      <%= f.text_field :name, :class => 'form-control', :value => 'Your Name', :onClick => 'this.setSelectionRange(0, this.value.length)' %>
+    </div>
+    <div class="col-lg-3 text-left">
+      <%= f.text_field :email, :value => 'Email Address', :class => 'form-control', :onClick => 'this.setSelectionRange(0, this.value.length)' %>
+    </div>
+    <div class="col-lg-3 text-left">
+      <%= f.telephone_field :phone, :class => 'form-control', :value => 'Phone Number', :onClick => 'this.setSelectionRange(0, this.value.length)' %>
+    </div>
+  </div>
+
+  <div class="col-lg-12 text-left">
+    <div class="col-lg-4 text-left">
+      <h2>Size</h2>
+    </div>
+  </div>
+
+  <div class="col-lg-12 text-left" onChange="sizeCalc_custom();">
+    <div class="form-group col-lg-2">
+      <label>Width</label>
+      <input type="text" id="width" class="form-control" value="0" onClick="this.setSelectionRange(0, this.value.length)">
+    </div>
+    <div class="form-group col-lg-1"></div>
+    <div class="form-group col-lg-2">
+      <label>Lenght</label>
+      <input type="text" id="length" class="form-control" value="0" onClick="this.setSelectionRange(0, this.value.length)">
+    </div>
+    <div class="form-group col-lg-1"></div>
+    <div class="form-group col-lg-2">
+      <p id="size" class="title-text">0 sq in</p>
+      <%= f.hidden_field(:size) %>
+    </div>
+    <div class="form-group col-lg-2">
+      <p id="size_total" class="title-text"></p>
+    </div>
+    <div class="form-group col-lg-1"></div>
+  </div>
+
+  <div class="col-lg-12 text-left">
+    <div class="col-lg-4 text-left">
+      <h2>Quilting</h2>
+      <%= f.hidden_field(:quilting) %>
+    </div>
+  </div>  
+
+  <div id="pantograph_section" class="col-lg-12 text-left">
+    <div class="form-group col-lg-1" >
+      <input id="pantograph" type="checkbox" onClick="quiltingCalc_custom(1);">
+    </div>
+    <div class="form-group col-lg-7">
+      <p class="title-text">Pantograph Patterns</p>
+      <%= f.hidden_field(:pantograph_patterns) %>
+    </div>
+  </div>
+  <div id="pantograph_image1" class="col-lg-12 text-left">
+    <div class="col-lg-8 text-left">
+      <%= image_tag("longarm design templets1.jpg", :class => "img", :id =>"img1", :alt => "", :onClick => "templetsclick_custom(1);") %>
+    </div>
+    <div id="templet1" class="col-lg-4 text-right">
+      <%= image_tag("longarm design templets1.jpg", :class => "img", :id =>"img2", :alt => "") %>
+    </div>
+  </div>
+  <div id="pantograph_image2" class="col-lg-12 text-left">
+    <div class="col-lg-8 text-left">
+      <%= image_tag("longarm design templets2.jpg", :class => "img", :id =>"img3", :alt => "", :onClick => "templetsclick_custom(2);") %>
+    </div>
+    <div id="templet2" class="col-lg-4 text-right">
+      <%= image_tag("longarm design templets2.jpg", :class => "img", :id =>"img4", :alt => "") %>
+    </div>
+  </div>
+
+  <div id="meandering_section" class="col-lg-12 text-left">
+    <div class="form-group col-lg-1">
+      <input id="meandering" type="checkbox" onClick="quiltingCalc_custom(2);">
+    </div>
+    <div class="form-group col-lg-7">
+      <p class="title-text">Meandering</p>
+    </div>
+  </div>
+
+  <div class="col-lg-12 text-right">
+    <div class="form-group col-lg-8"></div>
+    <div class="col-lg-2 text-left">
+      <p class="title-text"><strong>Total:</strong></p>
+    </div>
+    <div class="form-group col-lg-1"></div>
+  </div>
+
+  <div class="col-lg-12 text-right">
+    <div class="form-group col-lg-8"></div>
+    <div class="col-lg-2 text-left">
+      <%= f.hidden_field(:total) %>
+      <p id="total" class="estiment-calculation">$0.00</p>
+    </div>
+    <div class="col-lg-1 text-right">
+      <%= f.submit'Submit', :class => 'btn btn-default' %>
+    </div>
+  </div>
+<% end %>

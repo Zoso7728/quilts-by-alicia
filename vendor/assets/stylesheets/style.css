@@ -1,0 +1,130 @@
+/* Estiment Calculation Style */
+.estiment-calculation {
+    font-size: 28px;
+}
+
+.size-calculation {
+	padding-top: 20px;
+    font-size: 20px;
+}
+.title-text {
+    font-size: 24px;
+}
+.plane-text {
+	font-size: 18px;
+}
+#space {
+	margin-bottom: 25px;
+}
+/* Hidding the values of the Check Boxes */
+#img2 {
+    display: none;
+}
+
+#img4 {
+    display: none;
+}
+
+#pantograph_image1 {
+    display: none;
+}
+
+#pantograph_image2 {
+    display: none;
+}
+
+.img {
+    margin: 25px;
+    cursor: pointer;
+}
+
+/* Table styles */
+tr:nth-child(even) {
+    background-color: #91afd1;
+}
+.all_orders-table td {
+    padding: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.photo_memory-table td {
+    padding: 15px;
+}
+.tshirt-table td {
+    padding: 15px;
+}
+.custom-table td {
+    padding: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.long_arm-table td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/*----- Tabs -----*/
+.tabs {
+    width:100%;
+    display:inline-block;
+}
+ 
+    /*----- Tab Links -----*/
+    /* Clearfix */
+    .tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+ 
+    .tab-links li {
+        margin:0px 5px;
+        float:left;
+        list-style:none;
+    }
+ 
+        .tab-links a {
+            padding:9px 15px;
+            display:inline-block;
+            border-radius:3px 3px 0px 0px;
+            background:#7FB5DA;
+            font-size:16px;
+            font-weight:600;
+            color:#4c4c4c;
+            transition:all linear 0.15s;
+        }
+ 
+        .tab-links a:hover {
+            background:#a7cce5;
+            text-decoration:none;
+        }
+ 
+    li.active a, li.active a:hover {
+        background:#fff;
+        color:#4c4c4c;
+    }
+ 
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        padding:15px;
+        border-radius:3px;
+        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+        background:#fff;
+    }
+ 
+        .tab {
+            display:none;
+        }
+ 
+        .tab.active {
+            display:block;
+        }

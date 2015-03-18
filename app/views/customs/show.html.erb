@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%= render 'html_header' %>
+
+<body>
+
+<%= render 'nav' %>
+
+<div class="container">
+  <div class="row">
+    <div id="box" class="box">
+
+      <div class="col-lg-12">
+        <hr>
+        <h1 class="intro-text text-center">Create <strong>Estimate</strong></h1>
+        <hr>
+      </div>
+
+      <div class="col-lg-12 text-center">
+        <div class="col-lg-6 text-left">
+          <h1>Custom Quilt</h1><br>
+        </div>
+      </div>
+
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <strong>Name:</strong>
+        <%= @custom.name %>
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <%= @custom.email %>
+      </p>
+
+      <p>
+        <strong>Phone:</strong>
+        <%= @custom.phone %>
+      </p>
+
+      <p>
+        <strong>Size:</strong>
+        <%= @custom.size %>
+      </p>
+
+      <p>
+        <strong>Quilting:</strong>
+        <%= @custom.quilting %>
+      </p>
+
+      <p>
+        <strong>Pantograph patterns:</strong>
+        <%= @custom.pantograph_patterns %>
+      </p>
+
+      <p>
+        <strong>Total:</strong>
+        <%= @custom.total %>
+      </p>
+
+      <%= link_to 'Edit', edit_custom_path(@custom), :class => 'btn btn-default' %> 
+        <%= link_to 'Home', root_path, :class => 'btn btn-default' %>
+
+
+    </div>
+  </div>
+</div>
+
+<%= render 'footer' %>
+
+</body>
+
+</html>

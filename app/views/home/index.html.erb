@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%= render 'html_header' %>
+
+<body>
+
+<%= render 'nav' %>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12 text-center">
+                    <div id="carousel-example-generic" class="carousel slide">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators hidden-xs">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <%= image_tag("slide-1.jpg", :class => "img-responsive img-full", :alt => "") %>
+                            </div>
+                            <div class="item">
+                                <%= image_tag("slide-2.jpg", :class => "img-responsive img-full", :alt => "") %>
+                            </div>
+                            <div class="item">
+                                <%= image_tag("slide-3.jpg", :class => "img-responsive img-full", :alt => "") %>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="icon-prev"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="icon-next"></span>
+                        </a>
+                    </div>
+                    <h2 class="brand-before">
+                        <small>Welcome to</small>
+                    </h2>
+                    <h1 class="brand-name">Quilts By Alicia</h1>
+                    <hr class="tagline-divider">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">The Art of
+                        <strong>Quilting</strong>
+                    </h2>
+                    <hr>
+                    <%= image_tag("intro-pic2.jpg", :class => "img-responsive img-border img-left", :alt => "") %>
+                    <hr class="visible-xs">
+                    <p>Passing down the traditions from generation to generation, Alicia has acquired a special set of skills that can be showcased through the craft of quilting.</p>
+                    <p>Her <a href="portfolio.html">Portfolio</a> gives insight to the potential of her work. These are mostly quilts that were custom made from t-shirts and other clothes. To purchase a custom quilt please visit the <a href="contact.html">Contact</a> page and Email her your great idea!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Beautiful Quilts
+                        <strong>At A Beautiful Price</strong>
+                    </h2>
+                    <hr>
+                    <p>Are you interested in having your own custom quilt? Visit <a href="shop.html">Shop</a> to select a quilt.</p>
+                    <p>Have custom ideas? Why not <a href="contact.html">Contact</a> me and Email me exactly what your idea is!</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <%= render 'footer' %>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="/assets/jQuery.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+
+</html>
