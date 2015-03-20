@@ -6,7 +6,7 @@
 
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: asset-data-url("bg2.jpg"); 
+    background: url("https://young-peak-2342.herokuapp.com/assets/bg2.jpg"); 
 }
 
 h1,
