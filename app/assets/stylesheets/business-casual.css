@@ -6,7 +6,7 @@
 
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url(bg2.jpg); 
+    background: asset-data-url("bg2.jpg"); 
 }
 
 h1,
