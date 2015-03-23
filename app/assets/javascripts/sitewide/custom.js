@@ -72,7 +72,7 @@ function subtotalCalc_custom(element) {
 	var length = document.getElementById('length').value;
 	var size = width * length;
 	document.getElementById('size').innerHTML = size + " sq in";
-	document.getElementById('custom_size').value = size + "sq in";
+	document.getElementById('custom_size').value = size + " sq in";
 	var size_cost = size * .115;
 	document.getElementById('size_total').innerHTML = "$" + size_cost.toFixed(2);
 	
@@ -83,6 +83,6 @@ function subtotalCalc_custom(element) {
 
 	var subtotal = size_cost;
 	document.getElementById('total').innerHTML = "$" + subtotal.toFixed(2);
-	document.getElementById('custom_total').value = "$" + subtotal + ".00";
+	document.getElementById('custom_total').value = subtotal;
 }
 /*-------------- Custom Quilt -----------------*/
