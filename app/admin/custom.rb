@@ -1,4 +1,4 @@
-ActiveAdmin.register User do
+ActiveAdmin.register Custom do
   permit_params :name, :email, :phone, :size, :quilting, :pantograph_patterns, :total
 
   index do

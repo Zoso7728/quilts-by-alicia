@@ -1,4 +1,4 @@
-ActiveAdmin.register User do
+ActiveAdmin.register Tshirt do
   permit_params :name, :email, :phone, :shirts, :total
 
   index do
