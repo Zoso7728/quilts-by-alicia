@@ -1,4 +1,4 @@
-ActiveAdmin.register Photo Memory do
+ActiveAdmin.register PhotoMemory do
   permit_params :name, :email, :phone, :size, :total
 
   index do

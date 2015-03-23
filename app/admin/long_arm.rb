@@ -1,4 +1,4 @@
-ActiveAdmin.register Long Arm do
+ActiveAdmin.register LongArm do
   permit_params :name, :email, :phone, :size, :batting, :binding, :quilting, :pantograph_patterns, :total
 
   index do
