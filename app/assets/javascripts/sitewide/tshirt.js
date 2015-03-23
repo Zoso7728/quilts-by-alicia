@@ -6,6 +6,6 @@ function tshirt_Calculation() {
 	}
 	var total = size_value * 20;
 	document.getElementById('total').innerHTML = "$" + total + ".00";
-	document.getElementById('tshirt_total').value = "$" + total + ".00";
+	document.getElementById('tshirt_total').value = total;
 }
 /*-------------- T-Shirt Quilt -----------------*/

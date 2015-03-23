@@ -145,7 +145,7 @@ function subtotalCalc_longarm(element) {
 
 	var subtotal = size_cost + batting_cost + binding_cost + quilting_cost;
 	document.getElementById('total').innerHTML = "$" + subtotal.toFixed(2);
-	document.getElementById('long_arm_total').value = "$" + subtotal + ".00";
+	document.getElementById('long_arm_total').value = subtotal;
 }
 /*-------------- Long Arm Quilt -----------------*/
 
