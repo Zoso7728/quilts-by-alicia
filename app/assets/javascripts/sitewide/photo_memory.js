@@ -6,6 +6,12 @@ function small() {
 	document.getElementById('photo_memory_size').value = "Small";
 	document.getElementById('but-2').checked = false;
 	document.getElementById('but-3').checked = false;
+	if (document.getElementById('but-1').checked == false) {
+		var total = 0;
+		document.getElementById('total').innerHTML = "$0.00";
+		document.getElementById('photo_memory_total').value = total;
+		document.getElementById('photo_memory_size').value = "N/A";
+	}
 }
 
 function medium() {
@@ -15,6 +21,12 @@ function medium() {
 	document.getElementById('photo_memory_size').value = "Medium";
 	document.getElementById('but-1').checked = false;
 	document.getElementById('but-3').checked = false;
+	if (document.getElementById('but-2').checked == false) {
+		var total = 0;
+		document.getElementById('total').innerHTML = "$0.00";
+		document.getElementById('photo_memory_total').value = total;
+		document.getElementById('photo_memory_size').value = "N/A";
+	}
 }
 
 function large() {
@@ -24,5 +36,11 @@ function large() {
 	document.getElementById('photo_memory_size').value = "Large";
 	document.getElementById('but-1').checked = false;
 	document.getElementById('but-2').checked = false;
+	if (document.getElementById('but-3').checked == false) {
+		var total = 0;
+		document.getElementById('total').innerHTML = "$0.00";
+		document.getElementById('photo_memory_total').value = total;
+		document.getElementById('photo_memory_size').value = "N/A";
+	}
 }
 /*-------------- Photo Memory Quilt -----------------*/
