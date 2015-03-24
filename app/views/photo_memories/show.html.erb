@@ -3,8 +3,6 @@
 
 <%= render 'html_header' %>
 
-<body>
-
 <%= render 'nav' %>
 
 <div class="container">
@@ -51,16 +49,7 @@
           <%= @photo_memory.total %>
         </p>
 
-        <p>
-          <strong>Notes:</strong>
-          <%= @photo_memory.notes %>
-        </p>
-
-        <p>
-          <strong>Complete:</strong>
-          <%= @photo_memory.complete %>
-        </p>
- 
+        <%= link_to 'Edit', edit_long_arm_path(@photo_memory), :class => 'btn btn-default' %>
         <%= link_to 'Home', root_path, :class => 'btn btn-default' %>
 
 

@@ -11,6 +11,7 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
+  background: url("bg2.png");
   margin: 0;
 }
 article,
