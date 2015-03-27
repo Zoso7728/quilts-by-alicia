@@ -45,3 +45,12 @@ gem 'spring',        group: :development
 
 # Use rails_12factor
 gem 'rails_12factor', group: :production
+
+# Use Foreman
+group :development, :test do
+gem 'foreman'
+end
+
+# Use MailForm and SimpleForm
+gem 'mail_form'
+gem 'simple_form'

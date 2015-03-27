@@ -18,7 +18,8 @@ Rails.application.routes.draw do
 
   resources :about
 
-  resources :contact
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources :contacts
 
   resources :photo_memories
 
